@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpinGift</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Главное меню -->
+        <div class="main-menu" id="mainMenu">
+            <h1 class="title">SPIN<span>GIFT</span></h1>
+            <div class="buttons">
+                <button class="btn play-btn" id="playBtn">ИГРАТЬ</button>
+                <button class="btn inventory-btn" id="inventoryBtn">МОЙ ИНВЕНТАРЬ</button>
+            </div>
+        </div>
+
+        <!-- Игровой экран -->
+        <div class="game-screen" id="gameScreen" style="display: none;">
+            <div class="back-btn" id="backBtn">← Назад</div>
+            <div class="roulette-container">
+                <div class="roulette-wrapper">
+                    <div class="roulette-line" id="rouletteLine"></div>
+                </div>
+                <div class="roulette-marker"></div>
+            </div>
+            <div class="participants" id="participants"></div>
+            <button class="btn bet-btn" id="betBtn">СДЕЛАТЬ СТАВКУ</button>
+            <div class="timer" id="timer" style="display: none;">30</div>
+        </div>
+
+        <!-- Инвентарь -->
+        <div class="inventory-screen" id="inventoryScreen" style="display: none;">
+            <div class="back-btn" id="backBtnInventory">← Назад</div>
+            <h2>МОЙ ИНВЕНТАРЬ</h2>
+            <div class="gifts-grid" id="giftsGrid"></div>
+        </div>
+
+        <!-- Модальное окно ставки -->
+        <div class="modal" id="betModal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <h3>Выберите подарок для ставки</h3>
+                <div class="modal-gifts" id="modalGifts"></div>
+            </div>
+        </div>
+
+        <!-- Модальное окно победы -->
+        <div class="modal" id="winModal" style="display: none;">
+            <div class="modal-content win-content">
+                <h3>ПОБЕДА!</h3>
+                <p id="winText">Вы выиграли все подарки!</p>
+                <div class="won-gifts" id="wonGifts"></div>
+                <button class="btn" id="closeWinModal">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
